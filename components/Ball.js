@@ -1,7 +1,7 @@
 import Matter from "matter-js"
-import React from "react"
-import { View } from 'react-native'
-import tennisBall from '../assets/tennis-ball.png'
+import React  from "react"
+import { View, Image} from 'react-native'
+import tennisBall from '../images/tennis-ball.png'
 
 const Ball = props => {
     const widthBody = props.body.bounds.max.x - props.body.bounds.min.x
@@ -14,31 +14,36 @@ const Ball = props => {
 
     return (
 
-        <View style = {{
-            // borderWidth: 1,
-            // borderColor: color,
-            backgroundColor: color,
-            borderStyle: 'solid',
-            position: 'absolute',
-            left: xBody,
-            top: yBody,
-            width: widthBody,
-            height: heightBody
-        }}/>
+        // <View style = {{
+        //     // borderWidth: 1,
+        //     // borderColor: color,
+        //     backgroundColor: color,
+        //     borderStyle: 'solid',
+        //     position: 'absolute',
+        //     left: xBody,
+        //     top: yBody,
+        //     width: widthBody,
+        //     height: heightBody
+        // }}/>
+        <Image
+            style={{
+                position: 'absolute',
+                left: xBody,
+                top: yBody,
+                width: widthBody,
+                height: heightBody,
+
+            }}
+            source = {tennisBall}
+        />
     )
 }
 
 export default (world, label, color, pos, radius) => {
     const initialBall = Matter.Bodies.circle(pos.x, pos.y, radius,  {   
         label,
-        render: {
-            sprite: {
-                texture: {tennisBall}
-            }
-        },
-        density: 0.01,
-        frictionAir: 0.5,
-        motion: 1
+        density: 0.005,
+        frictionAir: 0.3,
     }
     );
     
