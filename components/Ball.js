@@ -33,12 +33,12 @@ export default (world, label, color, pos, radius) => {
         label,
         render: {
             sprite: {
-                texture: {tennisBall},
-                density: 0.01,
-                frictionAir: 1.5,
-                motion: 1
+                texture: {tennisBall}
             }
-        }
+        },
+        density: 0.01,
+        frictionAir: 0.5,
+        motion: 1
     }
     );
     
