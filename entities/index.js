@@ -18,17 +18,20 @@ export default restart => {
         physics: {engine, world},
 
         Floor: Floor(world,'floor','black', {x: 100, y:250}, {height: 10, width: 200}),
-        Wall1: Wall(world,'wall1','blue', {x: 50, y:200}, {height: 40, width: 10}),
-        Wall2: Wall(world,'wall2','blue', {x: 100, y:200}, {height: 40, width: 10}),
-        Wall3: Wall(world,'wall2','blue', {x: 160, y:200}, {height: 40, width: 10}),
-        
-        Ball1: Ball(world,'ball1', 'red', {x: 80, y:150}, 18),
-        Ball2: Ball(world,'ball2', 'red', {x: 130, y:150}, 18),
 
-        Roof1: Roof(world,'roof1','green', {x: 100, y:100}, {height: 10, width: 150}),    
+        Wall1: Wall(world,'wall1','blue', {x: 30, y:220}, {height: 40, width: 10}),
+        Wall2: Wall(world,'wall2','blue', {x: 90, y:220}, {height: 40, width: 10}),
+        Wall3: Wall(world,'wall3','blue', {x: 120, y:220}, {height: 40, width: 10}),
+        Wall4: Wall(world,'wall4','blue', {x: 180, y:220}, {height: 40, width: 10}),
         
-        Ball3: Ball(world,'ball3', 'red', {x: 80, y:70}, 18),
-        Ball4: Ball(world,'ball4', 'red', {x: 130, y:70}, 18),
+        Ball1: Ball(world,'ball1', 'red', {x: 60, y:200}, 18),
+        Ball2: Ball(world,'ball2', 'red', {x: 150, y:200}, 18),
+
+        Roof1: Roof(world,'roof1','green', {x: 60, y:190}, {height: 10, width: 80}),    
+        Roof2: Roof(world,'roof2','green', {x: 150, y:190}, {height: 10, width: 80}),    
+        
+        Ball3: Ball(world,'ball3', 'red', {x: 60, y:150}, 18),
+        Ball4: Ball(world,'ball4', 'red', {x: 150, y:150}, 18),
 
     }
 }

@@ -1,6 +1,7 @@
 import Matter from "matter-js"
 import React from "react"
-import { View } from 'react-native'
+import { View, Image } from 'react-native'
+import horiwood from '../images/horiwood.png'
 
 const Roof = props => {
     const widthBody = props.body.bounds.max.x - props.body.bounds.min.x
@@ -13,17 +14,19 @@ const Roof = props => {
 
     return (
 
-        <View style = {{
+        <Image style = {{
             // borderWidth: 1,
             // borderColor: color,
-            backgroundColor: color,
-            borderStyle: 'solid',
+            //backgroundColor: color,
+            //borderStyle: 'solid',
             position: 'absolute',
             left: xBody,
             top: yBody,
             width: widthBody,
             height: heightBody
-        }}/>
+            }}
+            source = {horiwood}
+        />
     )
 }
 
@@ -35,9 +38,11 @@ export default (world, label, color, pos, size) => {
       size.height,
       {
         label,
-        density: 0.001,
+        isStatic: true,
+        density: 0.01,
         frictionAir: 0.05,
-        motion: 1
+        restitution: 0.3,
+        friction: 0.01,
         }
     )
     Matter.World.add(world, initialRoof)
