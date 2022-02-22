@@ -9,8 +9,7 @@ import Bird from "../components/Bird";
 
 
 ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
-const windowHeight = Dimensions.get('window').height
-const windowWidth = Dimensions.get('window').width;
+
 
 export default restart => {
     let engine = Matter.Engine.create({enableSleeping: false})
