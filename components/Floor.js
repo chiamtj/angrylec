@@ -29,17 +29,14 @@ const Floor = props => {
 
 export default (world, label, color, pos, size) => {
     const initialFloor = Matter.Bodies.rectangle(
-        pos.x,
-        pos.y,
-        size.width,
-        size.height,
-        {
-            label,
-            isStatic: true,
-            density: 0.0005,
-            frictionAir: 0.05,
-            restitution: 0.3,
-            friction: 0.01,
+      pos.x,
+      pos.y,
+      size.width,
+      size.height,
+      {
+        label,
+        isStatic: true,
+        density: 0.1
         }
     )
     Matter.World.add(world, initialFloor)

@@ -43,7 +43,7 @@ export default (world, label, color, pos, radius) => {
     const initialBall = Matter.Bodies.circle(pos.x, pos.y, radius,  {   
         label,
         density: 0.005,
-        frictionAir: 0.3,
+        frictionAir: 0.01,
     }
     );
     

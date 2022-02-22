@@ -38,7 +38,6 @@ export default (world, label, color, pos, size) => {
       size.height,
       {
         label,
-        isStatic: true,
         density: 0.01,
         frictionAir: 0.05,
         restitution: 0.3,
