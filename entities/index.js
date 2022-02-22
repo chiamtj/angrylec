@@ -4,8 +4,13 @@ import * as ScreenOrientation from 'expo-screen-orientation';
 import Floor from '../components/Floor';
 import Ball from '../components/Ball';
 import Roof from '../components/Roof';
+import {Dimensions} from 'react-native';
+import Bird from "../components/Bird";
+
 
 ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
+const windowHeight = Dimensions.get('window').height
+const windowWidth = Dimensions.get('window').width;
 
 export default restart => {
     let engine = Matter.Engine.create({enableSleeping: false})
@@ -32,6 +37,10 @@ export default restart => {
         
         Ball3: Ball(world,'ball3', 'red', {x: 60, y:150}, 18),
         Ball4: Ball(world,'ball4', 'red', {x: 150, y:150}, 18),
+
+
+        Bird: Bird(world, 'green', {x:100, y:550}, {height:40, width: 40}),
+        
 
     }
 }
